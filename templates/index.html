@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat con IA - Ollama</title>
+</head>
+<body>
+    <h2>Chat Con IA (Ollama + Flask)</h2>
+    <form method="POST">
+        <input type="text" name="user_input" placeholder="Escribe tu pregunta" style="width: 80%;">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <textarea rows="20" cols="100" readonly style="margin-top: 20px">
+        {% for sender,message in conversation %}
+        {{ sender }} : {{ message }}
+
+        {% endfor %}
+    </textarea>
+</body>
+</html>
